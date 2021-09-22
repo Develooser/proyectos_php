@@ -37,15 +37,13 @@ números que al darle click lleven a esos enlaces.
         $links[1]['img'] = "php.png";
         $links[2]['img'] = "W3S.png";
 
+        
 
-        if(isset($_GET['id'])){
-            if($_GET['id'] <= (count($links)-1)){
-                echo '<a href="' . $links[$_GET['id']]['url'] . '"><img src="' .$links[$_GET['id']]['img']. '"  width="100">  </img></a>'; 
-            } else {
-                foreach ($links as $link){        
-                    echo '<a href="' . $link['url'] . '"><img src="' .$link['img']. '"  width="100">  </img></a>';                  
-                }
-            } 
+
+        if(isset($_GET['id']) && $_GET['id'] <= (count($links)) && $_GET['id'] > 0){
+            
+                echo '<a href="' . $links[($_GET['id']- 1)]['url'] . '"><img src="' .$links[$_GET['id'] -1 ]['img']. '"  width="100">  </img></a>'; 
+
         } else {
             foreach ($links as $link){        
                 echo '<a href="' . $link['url'] . '"><img src="' .$link['img']. '"  width="100">  </img></a>';                 

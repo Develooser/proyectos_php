@@ -10,7 +10,7 @@ números que al darle click lleven a esos enlaces.
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enlaces</title>
+    <title>Arrays, GET y POST</title>
 </head>
 <body>
     <?php
